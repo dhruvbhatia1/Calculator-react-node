@@ -54,7 +54,7 @@ const App = () => {
 	  
 	  
 			// Make the API call to calculate the result
-			const response = await axios.post("http://localhost:5000/api/calculate", {
+			const response = await axios.post("https://calculator-api-uoz3.onrender.com/api/calculate", {
 			  num1: number1,
 			  num2: number2,
 			  operation: operator,
@@ -84,7 +84,7 @@ const App = () => {
 
 	const handleDeleteCalculation = async (index) => {
 		const response = await axios.delete(
-			`http://localhost:5000/api/history/${index}`
+			`https://calculator-api-uoz3.onrender.com/api/history/${index}`
 		);
 		const status = response.status;
 		if (status === 200) {
@@ -98,7 +98,7 @@ const App = () => {
 
 	const fetchHistory = async () => {
 		try {
-			const response = await axios.get("http://localhost:5000/api/history");
+			const response = await axios.get("https://calculator-api-uoz3.onrender.com/api/history");
 			setHistory(response.data);
 		} catch (error) {
 			console.error("Error fetching history:", error);
