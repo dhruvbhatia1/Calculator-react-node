@@ -47,6 +47,7 @@ const App = () => {
 		const calculateResult = async () => {
 		  try {
 			// Fetch the expression from the display
+			// "24+12"
 			const operatorIndex = display.search(/[+\-*/]/);
 			const number1 = parseFloat(display.slice(0, operatorIndex));
 			const number2 = parseFloat(display.slice(operatorIndex + 1));
